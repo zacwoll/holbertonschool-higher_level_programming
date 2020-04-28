@@ -1,7 +1,3 @@
 #!/usr/bin/python3
-for i in range(26):
-    if i % 2 != 0:
-        i = chr(ord('z') - i - 32)
-    else:
-        i = chr(ord('z') - i)
-    print(i, end='')
+for letter in range(ord('z'), ord('a') - 1, -2):
+    print('{:c}{:c}'.format(letter, letter - 33), end='')

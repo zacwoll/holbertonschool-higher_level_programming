@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 from sys import argv
-total = 0
-for i in argv[1:]:
-    total += int(i)
-print(str(total))
+
+
+def main():
+    total = 0
+    for i in argv[1:]:
+        total += int(i)
+    print(str(total))
+if __name__ == "__main__":
+    main()

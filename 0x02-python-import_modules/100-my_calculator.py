@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 from calculator_1 import add, sub, mul, div
 from sys import argv
+
+
+def main():
 if len(argv) != 4:
     print("Usage: ./100-my_calculator.py <a> <operator> <b>")
     exit(1)
@@ -15,3 +18,6 @@ if argv[2] in ops:
 else:
     print("Unknown operator. Available ops: +, -, * and /")
     exit(1)
+
+if __name__ == "__main__":
+    main()

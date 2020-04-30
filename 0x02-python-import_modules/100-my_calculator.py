@@ -4,20 +4,24 @@ from sys import argv
 
 
 def main():
-if len(argv) != 4:
-    print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-    exit(1)
-ops = ['+', '-', '*', '/']
-op_list = [lambda a, b:add(a, b), lambda a, b:sub(a, b), lambda a, b:mul(a, b),
-           lambda a, b:div(a, b)]
-if argv[2] in ops:
+    if len(argv) != 4:
+        print('Usage: ./100-my_calculator.py <a> <operator> <b>')
+        exit(1)
+
+    if argv[2] not in '+-*/':
+        print('Unknown operator. Available operators: +, -, * and /')
+        exit(1)
+
     a = int(argv[1])
-    b = int(argv[2])
-    result = op_list[ops.index(argv[2])](a, b)
-    print(result)
-else:
-    print("Unknown operator. Available ops: +, -, * and /")
-    exit(1)
+    b = int(argv[3])
+    if argv[2] == '+':
+        print('{} + {} = {}'.format(a, b, add(a, b)))
+    elif argv[2] == '-':
+        print('{} - {} = {}'.format(a, b, sub(a, b)))
+    elif argv[2] == '*':
+        print('{} * {} = {}'.format(a, b, mul(a, b)))
+    elif argv[2] == '/':
+        print('{} / {} = {}'.format(a, b, div(a, b)))
 
 if __name__ == "__main__":
     main()

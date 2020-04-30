@@ -1,3 +1,9 @@
 #!/usr/bin/python3
 from variable_load_5 import a
-print(str(a))
+
+
+def main():
+    print(str(a))
+
+if __name__ == "__main__":
+    main()

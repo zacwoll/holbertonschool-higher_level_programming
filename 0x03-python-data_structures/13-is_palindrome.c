@@ -30,17 +30,15 @@ listint_t *reverse_list(listint_t **head)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *slow = *head, *fast = *head, *a, *b;
+	listint_t *slow = *head, *fast = *head;
 	
 	while (fast && fast->next)
 	{
 		fast = fast->next->next;
-		a = slow;
 		slow = slow->next;
 	}
 
 	slow = reverse_list(&slow);
-	b = slow;
 	fast = *head;
 	while (fast && slow)
 	{
@@ -49,7 +47,5 @@ int is_palindrome(listint_t **head)
 		fast = fast->next;
 		slow = slow->next;
 	}
-	slow = reverse_list(&b);
-	a->next = slow;
 	return (1);
 }

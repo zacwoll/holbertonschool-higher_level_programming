@@ -5,7 +5,3 @@ def multiple_returns(sentence):
     else:
         first_char = sentence[0]
     return (len(sentence), first_char)
-
-sentence = "At Holberton school, I learnt C!"
-length, first = multiple_returns(sentence)
-print("Length: {:d} - First character: {}".format(length, first))

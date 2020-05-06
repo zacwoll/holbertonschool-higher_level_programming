@@ -30,26 +30,26 @@ listint_t *reverse_list(listint_t **head)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *tortoise = *head, *hare = *head, *one, *two;
+	listint_t *slow = *head, *fast = *head, *a, *b;
 	
-	while (hare && hare->next)
+	while (fast && fast->next)
 	{
-		hare = hare->next->next;
-		one = tortoise;
-		tortoise = tortoise->next;
+		fast = fast->next->next;
+		a = slow;
+		slow = slow->next;
 	}
 
-	tortoise = reverse_list(&tortoise);
-	two = tortoise;
-	hare = *head;
-	while (hare && tortoise)
+	slow = reverse_list(&slow);
+	b = slow;
+	fast = *head;
+	while (fast && slow)
 	{
-		if (hare->n != tortoise->n)
+		if (fast->n != slow->n)
 			return (0);
-		hare = hare->next;
-		tortoise = tortoise->next;
+		fast = fast->next;
+		slow = slow->next;
 	}
-	tortoise = reverse_list(&two);
-	one->next = tortoise;
+	slow = reverse_list(&b);
+	a->next = slow;
 	return (1);
 }

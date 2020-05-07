@@ -2,7 +2,4 @@
 def best_score(a_dictionary):
     if not isinstance(a_dictionary, dict) or not a_dictionary:
         return None
-#    v = list(a_dictionary.values())
-#    k = list(a_dictionary.keys())
-#    return k[v.index(max(v))]
     return max(a_dictionary, key=a_dictionary.get)

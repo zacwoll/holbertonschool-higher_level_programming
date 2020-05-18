@@ -3,9 +3,9 @@ def safe_print_list(my_list=[], x=0):
     try:
         i = 0
         while i < x:
-            print("{}".format(my_list[i]), end='')
+            print(my_list[i], end='')
             i += 1
         print()
     except:
         print()
-        return i
+    return i

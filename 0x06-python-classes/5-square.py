@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Prints a representation of a Square Class"""
+
+
 class Square:
     """A Square"""
 
@@ -8,12 +11,12 @@ class Square:
 
     @property
     def size(self):
-        """gets the value of size"""
+        """Size Getter"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """sets the value of size"""
+        """Size Setter"""
         if type(value) != int:
             raise TypeError("size must be an integer")
         if value < 0:

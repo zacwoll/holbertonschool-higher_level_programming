@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Allow Square instances to be compared"""
+
+
 class Square:
     """A Square"""
 

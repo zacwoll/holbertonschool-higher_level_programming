@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""defines a Square Class with validation"""
+
+
 class Square:
     """A Square"""
 

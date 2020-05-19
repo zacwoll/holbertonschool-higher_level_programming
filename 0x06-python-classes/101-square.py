@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Represent a Square Object with a __repr__ toString"""
+
+
 class Square:
     """A Square"""
 

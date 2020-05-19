@@ -1,45 +1,45 @@
 #!/usr/bin/python3
-"""Define a square with position coordinates."""
+"""Moves a print of a Square Class based on position"""
 
 
 class Square:
-    """Represents a square."""
+    """A Square"""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initializes the data."""
+        """Init"""
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """Get the size."""
+        """Size Getter"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Set the size."""
+        """Size Setter"""
         if type(value) != int:
-            raise TypeError('size must be an integer')
+            raise TypeError("size must be an integer")
         if value < 0:
-            raise ValueError('size must be >= 0')
+            raise ValueError("size must be >= 0")
         self.__size = value
+
+    def area(self):
+        """Area of Square"""
+        return self.__size ** 2
 
     @property
     def position(self):
-        """Get the position."""
+        """Position Getter"""
         return self.__position
 
     @position.setter
     def position(self, value):
-        """Set the position."""
+        """Position Setter"""
         if type(value) != tuple or len(value) != 2 or type(value[0]) != int\
-           or type(value[1]) != int or value[0] < 0 or value[1] < 0:
+                or type(value[1]) != int or value[0] < 0 or value[1] < 0:
             raise TypeError('position must be a tuple of 2 positive integers')
-        self.__position = value
-
-    def area(self):
-        """Return the area of the square."""
-        return self.__size**2
+            self.__position = value
 
     def my_print(self):
         """Print the square."""

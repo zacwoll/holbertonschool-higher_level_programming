@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Defines a Circle Class as MagicClass"""
 import math
 
 

@@ -15,11 +15,11 @@ class Square:
         to_str = ''
         if self.__size == 0:
             to_str += '\n'
-            return ret_str
-        to_str += '\n' * self.position[1]
-        for i in range(self.__size):
-            to_str += ' ' * self.position[0]
-            to_str += '#' * self.__size + '\n'
+        else:
+            to_str += ('\n' * self.__position[1])
+            for i in range(self.__size):
+                to_str += (' ' * self.__position[0])
+                to_str += ('#' * self.__size + '\n')
         return to_str[:-1]
 
     @property

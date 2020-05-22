@@ -1,0 +1,54 @@
+The ''0-add_integer'' module
+============================
+
+Using ''add_integer''
+---------------------
+
+This is a text file in reStructured Text format. First import ''add_integer'' from the ''0-add_integer'' module:
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+	>>> add_integer(1, 2)
+	3
+
+	>>> add_integer(100, -2)
+	98
+
+	If only a is given, b will be 98
+	>>> add_integer(2)
+	100
+
+	Floats are OK, but floats will be cast as integers
+	>>> add_integer(100.3, -2)
+	98
+	
+	Only integers and floats are OK
+	>>> add_integer(4, "School")
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+	At least one argument must be provided.
+	>>> add_integer(None)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+	>>> add_integer()
+	Traceback (most recent call last):
+		...
+	TypeError: add_integer() missing 1 required positional argument: 'a'
+    
+	Test infinite number
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+    Test NaN
+    >>> add_integer(float('nan'))
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer

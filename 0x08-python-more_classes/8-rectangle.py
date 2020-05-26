@@ -4,19 +4,19 @@
 
 class Rectangle:
     """Rectangle"""
-    instance_count = 0
+    number_of_instances = 0
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """init"""
         self.width = width
         self.height = height
-        Rectangle.instance_count += 1
+        Rectangle.number_of_instances += 1
 
     def __del__(self):
         """Destroy Rectangle"""
         print('Bye rectangle...')
-        Rectangle.instance_count -= 1
+        Rectangle.number_of_instances -= 1
 
     def __str__(self):
         """Print Rectangle"""

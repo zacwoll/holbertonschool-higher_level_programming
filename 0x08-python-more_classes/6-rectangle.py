@@ -1,21 +1,21 @@
-#!/usr/bin/python3
+i!/usr/bin/python3
 """Rectangle Module"""
 
 
 class Rectangle:
     """Rectangle"""
-    instance_count = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """init"""
         self.width = width
         self.height = height
-        self.__class__.instance_count += 1
+        self.__class__.number_of_instances += 1
 
     def __del__(self):
         """Destroy Rectangle"""
         print('Bye rectangle...')
-        self.__class__.instance_count -= 1
+        self.__class__.number_of_instances -= 1
 
     def __str__(self):
         """Print Rectangle"""
@@ -66,3 +66,11 @@ class Rectangle:
         if self.__width is 0 or self.__height is 0:
             return 0
         return (self.__width + self.__height) * 2
+
+my_rectangle_1 = Rectangle(2, 4)
+my_rectangle_2 = Rectangle(2, 4)
+print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+del my_rectangle_1
+print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
+del my_rectangle_2
+print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))

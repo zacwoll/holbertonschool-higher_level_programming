@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Chessboard Module"""
 from sys import argv
 
 

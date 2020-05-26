@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Rectangle Module"""
+
+
 class Rectangle:
     """Rectangle"""
     instance_count = 0

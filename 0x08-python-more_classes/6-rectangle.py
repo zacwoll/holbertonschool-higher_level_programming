@@ -10,12 +10,12 @@ class Rectangle:
         """init"""
         self.width = width
         self.height = height
-        Rectangle.instance_count += 1
+        self.__class__.instance_count += 1
 
     def __del__(self):
         """Destroy Rectangle"""
         print('Bye rectangle...')
-        Rectangle.instance_count -= 1
+        self.__class__.instance_count -= 1
 
     def __str__(self):
         """Print Rectangle"""

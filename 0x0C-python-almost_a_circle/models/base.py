@@ -88,5 +88,5 @@ class Base:
                 elif cls.__name__ is "Square":
                     d = {"id": row[0], "size": row[1],
                          "x": row[2], "y": row[3]}
-                dictionary.append(cls.create(**data))
+                dictionary.append(cls.create(**d))
         return dictionary

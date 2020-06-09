@@ -26,14 +26,6 @@ class test_base(unittest.TestCase):
         """ Tests if nb_objects initializes to zero """
         self.assertEqual(Base._Base__nb_objects, 0)
 
-    #def test_id(self):
-    #    b1 = Base()
-    #    b2 = Base()
-    #    b3 = Base()
-    #    self.assertEqual(b1.id, 1)
-    #    self.assertEqual(b1.id, 2)
-    #    self.assertEqual(b1.id, 3)
-
     def test_instantiation(self):
         b = Base(1)
         self.assertEqual(str(type(b)), "<class 'models.base.Base'>")
@@ -99,7 +91,7 @@ were given"
         self.assertEqual(Base.to_json_string(d), '[{"Tabitha": 98}]')
         d = [{"Tabitha": 98}, {"cat": 5}, {"HI": 0}]
         self.assertEqual(Base.to_json_string(d),
-                '[{"Tabitha": 98}, {"cat": 5}, {"HI": 0}]')
+                         '[{"Tabitha": 98}, {"cat": 5}, {"HI": 0}]')
         d = [{}]
         self.assertEqual(Base.to_json_string(d), '[{}]')
         d = [{}, {}]

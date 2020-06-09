@@ -19,6 +19,7 @@ class TestRectangle(unittest.TestCase):
         Base._Base__nb_objects = 0
 
     def tearDown(self):
+        """ tearDown destroys any existing objects and processes """
         pass
 
     def test_type(self):

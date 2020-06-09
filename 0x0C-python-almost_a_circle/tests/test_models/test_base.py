@@ -27,6 +27,7 @@ class test_base(unittest.TestCase):
         self.assertEqual(Base._Base__nb_objects, 0)
 
     def test_instantiation(self):
+        """ Tests instantiation """
         b = Base(1)
         self.assertEqual(str(type(b)), "<class 'models.base.Base'>")
         self.assertEqual(b.__dict__, {"id": 1})

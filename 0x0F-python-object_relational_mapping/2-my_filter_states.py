@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lists all states in databse"""
+""" Return all states that match user input """
 import MySQLdb
 from sys import argv
 

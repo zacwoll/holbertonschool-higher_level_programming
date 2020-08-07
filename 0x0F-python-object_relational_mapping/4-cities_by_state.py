@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lists all states in databse"""
+""" Lists all cities from hbtn_0e_4_usa """
 import MySQLdb
 from sys import argv
 

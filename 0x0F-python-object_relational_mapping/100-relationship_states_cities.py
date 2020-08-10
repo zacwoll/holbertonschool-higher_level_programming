@@ -20,7 +20,6 @@ if __name__ == "__main__":
     state = State(name="California")
     session.flush()
     city = City(name="San Francisco", state_id=state.id)
-    state.cities.append(city)
 
     session.add(state)
     session.add(city)

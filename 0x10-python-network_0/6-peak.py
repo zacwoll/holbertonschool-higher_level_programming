@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-# Find peaks in an array
+""" Find peaks in a list of integers """
 
 def find_peak(list_of_integers):
+    """ Main Function for finding peak """
     if len(list_of_integers) == 0:
         return None
     if len(list_of_integers) == 1:
@@ -15,6 +16,7 @@ def find_peak(list_of_integers):
 
 
 def find_peak_util(arr, low, high, n):
+    """ Utility Recursive function for finding peak """
     mid = low + (high - low) // 2
 
     if arr[mid-1] and arr[mid] < arr[mid-1]:

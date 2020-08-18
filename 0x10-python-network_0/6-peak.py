@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """ Find peaks in a list of integers """
 
+
 def find_peak(list_of_integers):
     """ Main Function for finding peak """
     if len(list_of_integers) == 0:
@@ -27,5 +28,3 @@ def find_peak_util(arr, low, high, n):
         return arr[mid]
     else:
         return arr[low]
-
-
